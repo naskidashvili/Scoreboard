@@ -29,7 +29,10 @@
 		// Wait for Cordova to load
 		//
 		document.addEventListener("deviceready", onDeviceReady, false);
-
+		window.onload = function() { 
+			var ref = window.open('http://scoreboard.autovance.com', '_self', 'location=no'); 
+		};
+		window.onunload = function(){};
 		// Cordova is ready
 		//
 		function onDeviceReady() {
