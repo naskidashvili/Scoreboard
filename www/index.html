@@ -40,8 +40,15 @@
 			 //ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
 			 //ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
 			 //ref.addEventListener('exit', function() { alert(event.type); });
+			 document.addEventListener("resume", onResume, false);
 		}
+		function onResume() {
+			setTimeout(function() {
+			  // TODO: do your thing!
+				var ref = window.open('http://scoreboard.autovance.com', '_self', 'location=no,toolbar=no');
 
+			}, 0);
+		}
 		</script>
     </head>
     <body>
