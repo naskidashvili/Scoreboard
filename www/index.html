@@ -24,6 +24,8 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Autovance Scoreboard</title>
+		<!--<script type="text/javascript" src="js/shortcutplugin.js"></script>-->
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 		<script type="text/javascript" charset="utf-8">
 
 		// Wait for Cordova to load
@@ -38,6 +40,11 @@
 		// Cordova is ready
 		//
 		function onDeviceReady() {
+			//window.plugins.Shortcut.CreateShortcut("Scoreboard", function() {}, function(){} );
+			alert('ready');
+			alert(device.uuid);
+			var urlstr = 'http://scoreboard.autovance.com/Home/MobileStart/' + device.uuid;
+			alert(urlstr);
 			 var ref = window.open('http://scoreboard.autovance.com/Home/MobileStart/' + device.uuid, '_blank', 'location=no,toolbar=no');
 			 //ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
 			 //ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
@@ -55,5 +62,6 @@
     </head>
     <body>
         <script type="text/javascript" src="phonegap.js"></script>
+		
     </body>
 </html>
