@@ -31,13 +31,13 @@
 		//window.plugins.Shortcut.CreateShortcut("ScoreBoard", successfunc, failfunc );
 		document.addEventListener("deviceready", onDeviceReady, false);
 		window.onload = function() { 
-			var ref = window.open('http://scoreboard.autovance.com', '_blank', 'location=no,toolbar=no'); 
+			var ref = window.open('http://scoreboard.autovance.com/Home/MobileStart/'+ device.uuid, '_blank', 'location=no,toolbar=no');
 		};
 		window.onunload = function(){};
 		// Cordova is ready
 		//
 		function onDeviceReady() {
-			 var ref = window.open('http://scoreboard.autovance.com', '_blank', 'location=no,toolbar=no');
+			 var ref = window.open('http://scoreboard.autovance.com/Home/MobileStart/'+ device.uuid, '_blank', 'location=no,toolbar=no');
 			 //ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
 			 //ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
 			 //ref.addEventListener('exit', function() { alert(event.type); });
@@ -46,7 +46,7 @@
 		function onResume() {
 			setTimeout(function() {
 			  // TODO: do your thing!
-				var ref = window.open('http://scoreboard.autovance.com', '_blank', 'location=no,toolbar=no');
+				var ref = window.open('http://scoreboard.autovance.com/Home/MobileStart/'+ device.uuid, '_blank', 'location=no,toolbar=no');
 
 			}, 0);
 		}
