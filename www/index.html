@@ -40,11 +40,6 @@
 		//
 		function onDeviceReady() {
 			//window.plugins.Shortcut.CreateShortcut("Scoreboard", function() {}, function(){} );
-			alert('ready');
-			alert(device.uuid);
-			alert('test1');
-			var urlstr = 'http://scoreboard.autovance.com/Home/MobileStart/' + device.uuid;
-			alert(urlstr);
 			 var ref = window.open('http://scoreboard.autovance.com/Home/MobileStart/' + device.uuid, '_blank', 'location=no,toolbar=no');
 			 //ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
 			 //ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
