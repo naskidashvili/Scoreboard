@@ -39,12 +39,17 @@
 		// Cordova is ready
 		//
 		function onDeviceReady() {
-			window.plugins.Shortcut.CreateShortcut("Scoreboard", function() {}, function(){} );
 			var ref = window.open('http://scoreboard.autovance.com/Home/MobileStart/' + device.uuid, '_blank', 'location=no,toolbar=no');
 			 //ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
 			 //ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
 			 //ref.addEventListener('exit', function() { alert(event.type); });
 			 document.addEventListener("resume", onResume, false);
+			 
+			 if (window.localStorage.getItem("shortcut") != "1")
+				{			
+					window.plugins.Shortcut.CreateShortcut("Scoreboard", function() {}, function(){} );
+					window.localStorage.setItem("shortcut", "1");
+				}
 		}
 		function onResume() {
 			setTimeout(function() {
