@@ -25,7 +25,6 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Autovance Scoreboard</title>
 		<!--<script type="text/javascript" src="js/shortcutplugin.js"></script>-->
-		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 		<script type="text/javascript" charset="utf-8">
 
 		// Wait for Cordova to load
@@ -43,6 +42,7 @@
 			//window.plugins.Shortcut.CreateShortcut("Scoreboard", function() {}, function(){} );
 			alert('ready');
 			alert(device.uuid);
+			alert('test1');
 			var urlstr = 'http://scoreboard.autovance.com/Home/MobileStart/' + device.uuid;
 			alert(urlstr);
 			 var ref = window.open('http://scoreboard.autovance.com/Home/MobileStart/' + device.uuid, '_blank', 'location=no,toolbar=no');
