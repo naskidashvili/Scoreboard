@@ -2,7 +2,7 @@
 <widget id="com.autovance.scoreboard" version="1.0.13" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Scoreboard</name>
     <description>
-        Scoreboard Test
+        Scoreboard Mobile Application
     </description>
     <author email="support@autovance.com" href="http://scoreboard.autovance.com">
         Autovance Team
