@@ -45,11 +45,17 @@
 			 //ref.addEventListener('exit', function() { alert(event.type); });
 			 document.addEventListener("resume", onResume, false);
 			 
-			 if (window.localStorage.getItem("shortcut") != "1")
-				{			
-					window.plugins.Shortcut.CreateShortcut("Scoreboard", function() {}, function(){} );
-					window.localStorage.setItem("shortcut", "1");
-				}
+			var devicePlatform = device.platform;
+			if (devicePlatform == "Android") {
+				if (window.localStorage.getItem("shortcut") != "1")
+					{			
+						window.plugins.Shortcut.CreateShortcut("Scoreboard", function() {}, function(){} );
+						window.localStorage.setItem("shortcut", "1");
+					}
+			} else {
+				var statusbar = window.plugins.statusBar;
+				statusbar.show();
+			}
 		}
 		function onResume() {
 			setTimeout(function() {
