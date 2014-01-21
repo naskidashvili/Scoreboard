@@ -57,4 +57,8 @@
 	<access uri="*" subdomains="true" />
 	<access uri="scoreboard.autovance.com" subdomains="true" />
 	<access uri="klipfolio.com" subdomains="true" />
+	
+	<feature name="StatusBar">
+		<param name="ios-package" value="CDVStatusBar" onload="true" />
+	</feature>
 </widget>
